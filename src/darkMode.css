@@ -1,0 +1,49 @@
+/* Dark mode specific styles */
+.MuiDataGrid-root.MuiDataGrid-root--darkMode .MuiDataGrid-columnHeader {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #e0e0e0 !important;
+}
+
+.MuiDataGrid-root.MuiDataGrid-root--darkMode .MuiDataGrid-cell {
+  color: #e0e0e0 !important;
+}
+
+.MuiDataGrid-root.MuiDataGrid-root--darkMode .MuiDataGrid-row:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.MuiDataGrid-root.MuiDataGrid-root--darkMode .MuiDataGrid-row:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark mode input fields */
+.dark-mode-input .MuiOutlinedInput-root {
+  color: #e0e0e0;
+}
+
+.dark-mode-input .MuiInputLabel-root {
+  color: #a0a0a0;
+}
+
+.dark-mode-input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.23);
+}
+
+.dark-mode-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #3da0d9;
+}
+
+/* Dark mode chart */
+.dark-mode-chart {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.dark-mode-chart .chartjs-render-monitor {
+  filter: brightness(0.9) contrast(1.1);
+}

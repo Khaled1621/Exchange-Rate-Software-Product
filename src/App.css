@@ -1,0 +1,209 @@
+/*────────────────────────────────────────────────────────────────────*/
+/*   global reset & background                                        */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   top header bar                                                  */
+.header {
+  padding: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header h1 {
+  margin: 0;
+}
+.header hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  margin: 16px auto;
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   navbar styling                                                  */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 0;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.nav .MuiButton-root {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav .MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced navbar styling for dark mode */
+.dark-mode-navbar {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   FLEX WRAPPER FOR TWO PANELS SIDE BY SIDE                        */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* Add a flex row for the calculator and transaction sections */
+.calculator-transaction-row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+  align-items: stretch;
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   shared panel styling (calculator & transaction)                 */
+.wrapper {
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0; /* This is important for flex items */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   calculator-specific controls                                    */
+.calculator-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+}
+.result {
+  margin-top: 12px;
+  font-style: italic;
+  color: #333;
+}
+
+/*────────────────────────────────────────────────────────────────────*/
+/*   responsive tweaks                                               */
+@media (max-width: 600px) {
+  .calculator-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Add or update these styles */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.offers-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.offers-wrapper {
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add these styles for the calculator and transaction sections */
+.calculator-section,
+.transaction-section {
+  width: 100%;
+  flex: 1; /* Make them take equal space in the flex container */
+}
+
+.calculator-wrapper,
+.transaction-wrapper {
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form fields styling */
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 0 8px;
+  }
+
+  .calculator-transaction-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .wrapper {
+    padding: 16px;
+  }
+
+  .offers-section {
+    padding: 0 8px;
+  }
+
+  .offers-wrapper {
+    padding: 16px;
+  }
+
+  .calculator-wrapper,
+  .transaction-wrapper {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 12px;
+  }
+
+  .offers-wrapper {
+    padding: 12px;
+  }
+
+  .calculator-wrapper,
+  .transaction-wrapper {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Text-to-speech mode styles */
+
+/* Highlight the element being read */
+.reading-highlight {
+  background-color: rgba(255, 255, 0, 0.2);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+  position: relative;
+}
+
+/* Make sections clickable when read mode is active */
+[class*="wrapper"]:hover {
+  cursor: pointer;
+}
+
+/* Pulse animation for the speech icon */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.speaking-icon {
+  animation: pulse 1.5s infinite;
+}
+
+/* Speech cursor styles */
+.speech-cursor {
+  position: absolute;
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #ff5722;
+  animation: blink 0.7s infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  z-index: 100;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Highlight current word being spoken */
+.current-word {
+  background-color: rgba(255, 165, 0, 0.3);
+  border-radius: 3px;
+  padding: 0 2px;
+  display: inline-block;
+}
+
+/* Container for text being read with speech */
+.speech-text-container {
+  position: relative;
+  line-height: 1.6;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .speech-text-container {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+}
